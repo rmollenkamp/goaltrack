@@ -1,0 +1,28 @@
+<div class="new-game-info">
+    <form class="example-form" (submit)="saveGame()" [formGroup]="newGameForm">
+        <mat-form-field class="example-full-width">
+            <mat-label>Team</mat-label>
+            <input matInput placeholder="Team name" formControlName="teamName">
+        </mat-form-field>
+        
+        <mat-form-field class="example-full-width">
+            <mat-label>Opponent</mat-label>
+            <input matInput placeholder="Opponent name" formControlName="opponentName">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Start Date</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="gameStartDate">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div class="button-div">
+            <span class="button-span-left">
+                <button class="submit-button" mat-raised-button type="submit">Create Game</button>
+            </span>
+            <button class="cancel-button" mat-raised-button type="reset" (click)="closeForm()">Cancel</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<div style="height: 80vh;">
+    <mat-toolbar color="primary" class="toolbar">
+        <mat-toolbar-row>
+        <button mat-icon-button (click)="toggleSidenav()" fxShow="true" fxHide.gt-sm>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span><a [routerLink]="['/']" class="brand-link">Goal Track</a></span>
+        <span class="menu-spacer"></span>
+        <div fxShow="true" fxHide.lt-md>
+            <a (click)="navigateToRoute('/games')" mat-button>Games</a>
+            <a (click)="navigateToRoute('/history')" mat-button>History</a>
+            <a (click)="navigateToRoute('/statistics')" mat-button>Statistics</a>
+        </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container fxFlexFill>
+        <mat-sidenav #sidenav>
+            <mat-nav-list>
+                <a  mat-list-item (click)="navigateToRoute('/games')">Games</a>
+                <a  mat-list-item (click)="navigateToRoute('/history')">History</a>
+                <a  mat-list-item (click)="navigateToRoute('/statistics')">Statistics</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content fxFlexFill class="main-content">
+            <router-outlet />
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

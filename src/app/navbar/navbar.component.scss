@@ -1,0 +1,22 @@
+:host{
+    .menu-spacer {
+        flex: 1 1 auto;
+    }
+
+    .main-content {
+        padding: 2vw;
+    }
+
+    .brand-link {
+        text-decoration: none;
+        color: black;
+        :visited{
+            text-decoration: none;
+            color: black;
+        }
+    }
+
+    .toolbar {
+        background-image: linear-gradient(to right, aquamarine , lightblue);
+    }
+}

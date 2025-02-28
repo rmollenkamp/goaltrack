@@ -1,1 +1,25 @@
-<p>games works!</p>
+<ng-container *ngIf="showNewGameForm() === false">
+    <div class="padded-row">
+        <button mat-raised-button (click)="toggleNewGame()">New Game</button>
+    </div>
+</ng-container>
+<ng-container *ngIf="showNewGameForm() === true">
+    <div  class="padded-row">
+        <app-new-game (close)="toggleNewGame()"></app-new-game>
+    </div>
+</ng-container>
+<ng-container *ngIf="games() !== null && games().length > 0; then gamesTemplate; else noGames;" />
+<ng-template #noGames>
+    <p>No Games to Display</p>
+</ng-template>
+<ng-template #gamesTemplate>
+    <mat-accordion>
+        <mat-expansion-panel *ngFor="let game of games()">
+            <mat-expansion-panel-header>
+                <mat-panel-title>{{ game.teamName }} vs. {{ game.opponentName }}</mat-panel-title>
+                <mat-panel-description>{{ game.startDate | date:'longDate' }}</mat-panel-description>
+            </mat-expansion-panel-header>
+            <img src="assets/img/hockey-half-rink.png" height="500vh" priority>
+        </mat-expansion-panel>
+    </mat-accordion>
+</ng-template>

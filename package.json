@@ -11,10 +11,13 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^19.1.7",
+    "@angular/cdk": "^19.2.1",
     "@angular/common": "^19.1.7",
     "@angular/compiler": "^19.1.7",
     "@angular/core": "^19.1.7",
+    "@angular/flex-layout": "^15.0.0-beta.42",
     "@angular/forms": "^19.1.7",
+    "@angular/material": "^19.1.5",
     "@angular/platform-browser": "^19.1.7",
     "@angular/platform-browser-dynamic": "^19.1.7",
     "@angular/router": "^19.1.7",
@@ -25,6 +28,8 @@
     "@ngrx/router-store": "^19.0.1",
     "@ngrx/signals": "^19.0.1",
     "@ngrx/store": "^19.0.1",
+    "@ngrx/store-devtools": "^19.0.1",
+    "bootstrap": "^5.3.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
