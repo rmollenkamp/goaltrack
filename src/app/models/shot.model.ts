@@ -3,5 +3,8 @@ export interface Shot {
     shotY: number,
     screened: boolean,
     changedDirection: boolean,
-    crossedCenterline: boolean
+    crossedCenterline: boolean,
+    shotDistanceInFeet: number,
+    shotAngle: number,
+    expectedSavePercentage: number
 }

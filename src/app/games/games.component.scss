@@ -2,7 +2,7 @@
     .drawing-area {
         position: relative;
         cursor: pointer;
-        border-radius: 0px 0px 180px 180px;
+        border-radius: 0px 0px 195px 195px;
     }
       
     .shot {
@@ -29,11 +29,24 @@
         padding-bottom: 20px;
     }
 
-    .undo-div {
-        padding-left: 20px;
-    }
-
     .panel-content {
         display: flex;
+    }
+
+    .game-info-section {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        .buttons-section {
+            display: flex;
+            flex-direction: row;
+        }
+        .statistics-section {
+            padding-top: 20px;
+        }
+    }
+
+    .undo-div {
+        padding-right: 10px;
     }
 }

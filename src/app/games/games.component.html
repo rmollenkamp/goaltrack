@@ -23,22 +23,33 @@
                 <div class="panel-content">
                     <div>
                         <img #rinkImg class="drawing-area" src="assets/img/hockey-half-rink.png" height="500px" (click)="addShotToImage($event, i)" />
+                        <div
+                            *ngFor="let shot of currentGameShots()"
+                            [ngStyle]="{'left': shot.shotX + 'px', 'top': shot.shotY + 'px'}"
+                            class="shot"
+                        ></div>
+                        <div
+                            *ngFor="let shot of currentGameGoals()"
+                            [ngStyle]="{'left': shot.shotX + 'px', 'top': shot.shotY + 'px'}"
+                            class="goal"
+                        ></div>
                     </div>
-                    <div
-                        *ngFor="let shot of currentGameShots()"
-                        [ngStyle]="{'left': shot.shotX + 'px', 'top': shot.shotY + 'px'}"
-                        class="shot"
-                    ></div>
-                    <div
-                        *ngFor="let shot of currentGameGoals()"
-                        [ngStyle]="{'left': shot.shotX + 'px', 'top': shot.shotY + 'px'}"
-                        class="goal"
-                    ></div>
-                    <div class="undo-div">
-                        <button mat-raised-button (click)="undoLastShot()"><mat-icon aria-hidden="false" aria-label="Undo Last Shot Icon" fontIcon="undo"></mat-icon>Undo Last Shot</button>
-                    </div>
-                    <div class="undo-div">
-                        <button mat-raised-button (click)="undoLastGoal()"><mat-icon aria-hidden="false" aria-label="Undo Last Shot Icon" fontIcon="undo"></mat-icon>Undo Last Goal</button>
+                    <div class="game-info-section">
+                        <div class="buttons-section">
+                            <div class="undo-div">
+                                <button mat-raised-button (click)="undoLastShot()"><mat-icon aria-hidden="false" aria-label="Undo Last Shot Icon" fontIcon="undo"></mat-icon>Undo Last Shot</button>
+                            </div>
+                            <div class="undo-div">
+                                <button mat-raised-button (click)="undoLastGoal()"><mat-icon aria-hidden="false" aria-label="Undo Last Shot Icon" fontIcon="undo"></mat-icon>Undo Last Goal</button>
+                            </div>
+                        </div>
+                        <div class="statistics-section">
+                            <div><strong>Shots: </strong> {{ totalShots() }}</div>
+                            <div><strong>Goals: </strong> {{ totalGoals() }}</div>
+                            <div><strong>Save %: </strong> {{ savePercentage() | percent: '2.0-2' }}</div>
+                            <div><strong>xG: </strong> {{ expectedGoals() | number : '1.2-2' }}</div>
+                            <div><strong>GSAx:</strong> {{ goalsSavedAboveExpected() | number: '1.2-2' }}</div>
+                        </div>
                     </div>
                 </div>
             </mat-expansion-panel>
