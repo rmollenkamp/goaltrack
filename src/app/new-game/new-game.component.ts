@@ -51,7 +51,9 @@ export class NewGameComponent {
       const game: Game = {
         teamName: this.newGameForm.controls?.teamName?.value?.toString() || '',
         opponentName: this.newGameForm.controls.opponentName.value?.toString() || '',
-        startDate: this.newGameForm.controls.gameStartDate.value?.toString() || ''
+        startDate: this.newGameForm.controls.gameStartDate.value?.toString() || '',
+        shots: [],
+        goals: [],
       }
   
       this.store.dispatch(addGame({game}));

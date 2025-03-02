@@ -1,5 +1,39 @@
-.padded-row {
-    display: table-cell;
-    max-width: 600px;
-    padding-bottom: 20px;
+:host{
+    .drawing-area {
+        position: relative;
+        cursor: pointer;
+        border-radius: 0px 0px 180px 180px;
+    }
+      
+    .shot {
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .goal {
+        width: 10px;
+        height: 10px;
+        background-color: green;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 999;
+    }
+
+    .padded-row {
+        display: table-cell;
+        max-width: 600px;
+        padding-bottom: 20px;
+    }
+
+    .undo-div {
+        padding-left: 20px;
+    }
+
+    .panel-content {
+        display: flex;
+    }
 }

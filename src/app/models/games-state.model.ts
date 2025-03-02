@@ -1,5 +1,6 @@
 import { Game } from "./game.model";
 
 export interface GamesState {
-    games: Game[]
+    games: Game[],
+    currentGame: Game | null
 }

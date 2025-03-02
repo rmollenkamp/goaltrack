@@ -10,8 +10,7 @@ import {
   ShowHideDirective,
   ShowHideStyleBuilder,
   StyleDirective
-} from "./chunk-QXIKCZTZ.js";
-import "./chunk-GODDPFZB.js";
+} from "./chunk-2JGKZ6XH.js";
 import {
   DefaultFlexAlignDirective,
   DefaultFlexDirective,
@@ -37,7 +36,7 @@ import {
   LayoutGapDirective,
   LayoutGapStyleBuilder,
   LayoutStyleBuilder
-} from "./chunk-IRNX4NSQ.js";
+} from "./chunk-2HUPHUB2.js";
 import {
   DefaultGridAlignColumnsDirective,
   DefaultGridAlignDirective,
@@ -73,7 +72,7 @@ import {
   GridRowStyleBuilder,
   GridRowsDirective,
   GridRowsStyleBuilder
-} from "./chunk-WISI7DTT.js";
+} from "./chunk-HXS7BDDF.js";
 import {
   BREAKPOINT,
   BREAKPOINTS,
@@ -107,12 +106,13 @@ import {
   sortAscendingPriority,
   sortDescendingPriority,
   validateBasis
-} from "./chunk-TZ3MOP3G.js";
-import "./chunk-FRC3AUGQ.js";
-import "./chunk-TG75JM4F.js";
+} from "./chunk-SPRELMK4.js";
+import "./chunk-RNFS3GMC.js";
+import "./chunk-KIZPPWC7.js";
+import "./chunk-2FHYMIEE.js";
 import {
   isPlatformServer
-} from "./chunk-HLDATYPM.js";
+} from "./chunk-6AOG4C2W.js";
 import {
   Inject,
   NgModule,
@@ -123,7 +123,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-DKJCWSNI.js";
+} from "./chunk-IRE55CRY.js";
 
 // node_modules/@angular/flex-layout/fesm2020/angular-flex-layout.mjs
 var VERSION = new Version("15.0.0-beta.42");

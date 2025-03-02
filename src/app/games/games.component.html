@@ -14,12 +14,34 @@
 </ng-template>
 <ng-template #gamesTemplate>
     <mat-accordion>
-        <mat-expansion-panel *ngFor="let game of games()">
-            <mat-expansion-panel-header>
-                <mat-panel-title>{{ game.teamName }} vs. {{ game.opponentName }}</mat-panel-title>
-                <mat-panel-description>{{ game.startDate | date:'longDate' }}</mat-panel-description>
-            </mat-expansion-panel-header>
-            <img src="assets/img/hockey-half-rink.png" height="500vh" priority>
-        </mat-expansion-panel>
+        <ng-container *ngFor="let game of games(); let i = index;">
+            <mat-expansion-panel (opened)="setSelectedGame(game)" [expanded]="game.gameId === currentGame()?.gameId">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>{{ game.teamName }} vs. {{ game.opponentName }}</mat-panel-title>
+                    <mat-panel-description>{{ game.startDate | date:'longDate' }}</mat-panel-description>
+                </mat-expansion-panel-header>
+                <div class="panel-content">
+                    <div>
+                        <img #rinkImg class="drawing-area" src="assets/img/hockey-half-rink.png" height="500px" (click)="addShotToImage($event, i)" />
+                    </div>
+                    <div
+                        *ngFor="let shot of currentGameShots()"
+                        [ngStyle]="{'left': shot.shotX + 'px', 'top': shot.shotY + 'px'}"
+                        class="shot"
+                    ></div>
+                    <div
+                        *ngFor="let shot of currentGameGoals()"
+                        [ngStyle]="{'left': shot.shotX + 'px', 'top': shot.shotY + 'px'}"
+                        class="goal"
+                    ></div>
+                    <div class="undo-div">
+                        <button mat-raised-button (click)="undoLastShot()"><mat-icon aria-hidden="false" aria-label="Undo Last Shot Icon" fontIcon="undo"></mat-icon>Undo Last Shot</button>
+                    </div>
+                    <div class="undo-div">
+                        <button mat-raised-button (click)="undoLastGoal()"><mat-icon aria-hidden="false" aria-label="Undo Last Shot Icon" fontIcon="undo"></mat-icon>Undo Last Goal</button>
+                    </div>
+                </div>
+            </mat-expansion-panel>
+        </ng-container>
     </mat-accordion>
 </ng-template>

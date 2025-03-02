@@ -8,7 +8,7 @@ import {
   StateObservable,
   UPDATE,
   toSignal
-} from "./chunk-DAHE4JCF.js";
+} from "./chunk-Y42EFEJB.js";
 import {
   EMPTY,
   ErrorHandler,
@@ -46,7 +46,7 @@ import {
   ɵɵdefineNgModule,
   ɵɵgetInheritedFactory,
   ɵɵinject
-} from "./chunk-DKJCWSNI.js";
+} from "./chunk-IRE55CRY.js";
 
 // node_modules/@ngrx/store-devtools/fesm2022/ngrx-store-devtools.mjs
 var PERFORM_ACTION = "PERFORM_ACTION";
