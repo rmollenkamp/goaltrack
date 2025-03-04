@@ -29,5 +29,3 @@ Thumbs.db
 *.log
 
 # Temporary files
-*~
-.angular/cache/**
